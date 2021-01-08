@@ -115,11 +115,11 @@ body{
     padding:25px!important;
     transition: 0.3s all ease;
 }
-.barber_list--single:hover{
+.barber_list--single:hover, .barber_list--single.active{
     background-color: rgba(221, 221, 221, 0.24);
     cursor:pointer;
 }
-.barber_list--single:hover .more--btn{
+.barber_list--single:hover .more--btn, .barber_list--single.active  .more--btn{
     background-color: rgba(221, 221, 221, 0.24);
     cursor:pointer;
     background: #fff;
@@ -131,6 +131,15 @@ body{
     padding: 5px 20px;
     background: #f9f9f996;
     transition: 0.3s all ease;
+}
+.more--btn-li{
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    padding: 5px 20px;
+    background: #d0d0d0;
+    transition: 0.3s all ease;
+    margin-left:15px;
 }
 .barber_list--single .more--btn{
     position:absolute;
@@ -150,10 +159,13 @@ body{
     color:#949494;
 }
 .barber--portfolio{
-
+    display: flex;
+    align-items: center;
 }
 .barber--portfolio ul{
-
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
 }
 .barber--portfolio ul li{
     display: inline-block;
@@ -161,6 +173,11 @@ body{
     height:42px;
     border-radius: 50%;
     overflow: hidden;
+    margin-right:7px;
+    font-weight: 500;
+}
+.barber--portfolio ul li:last-child{
+    margin-right:0;
 }
 .portfolio--img{
     object-fit: fill;
@@ -211,6 +228,7 @@ body{
     border-radius:50%;
     display: block;
     margin:0 auto;
+    border: 3px solid #FFF;
 }
 .info--wrap{
     padding:25px;
